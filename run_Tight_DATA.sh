@@ -13,14 +13,14 @@ cd -
 
 cp ${CMSSWBaseDir}/fitMuon2_newselector2.py .
 
-iteration=miniTight_Tight_abseta_condor
+iteration=miniTight_Tight_abseta
 input_type=DATA
 
-if [[ "${input_type}" -eq "MC" ]]; then
+if [ "${input_type}" == "MC" ]; then
    file=mc2017
    mode=mc_all
-elif [[ "${input_type}" -eq "DATA" ]]; then
-   file=data2017
+elif [ "${input_type}" == "DATA" ]; then
+   file=dataidF_Tight
    mode=data_all
 else
    echo "Unknown parameter"

@@ -4,7 +4,8 @@ executable = run_Loose_DATA.sh
 output = log_condor/LooseDATA_$(ClusterId).$(ProcId).out
 error = log_condor/LooseDATA_$(ClusterId).$(ProcId).err
 log = log_condor/LooseDATA_$(ClusterId).$(ProcId).log
-+JobFlavour = "nextweek"
+request_memory = 10000MB
++JobFlavour = "testmatch"
 
 queue
 

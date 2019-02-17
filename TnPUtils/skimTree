@@ -46,6 +46,7 @@ if args.verbosity == 1:
 # Deactivate and reactivate branches from 'remove' and 'keep' arguments
 if args.remove == 'all':
     for branch in treeInput.GetListOfBranches():
+        print(branch.GetName())
         if not branch.GetName() in args.cut:
             treeInput.SetBranchStatus(branch.GetName(), 0)
 else:

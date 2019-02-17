@@ -40,7 +40,7 @@ void addVariables() {
     // ===== Write here the variables you want to save
 
     //TFile *fOut = new TFile("/lustre/cms/store/user/schhibra/tnpZ_withVars.root", "RECREATE");// To run batch jobs
-    TFile *fOut = new TFile("fullData_iso.root", "RECREATE");
+    TFile *fOut = new TFile("/eos/user/w/wiwong/TagAndProbe/addVar_out/fullDY_iso.root", "RECREATE");
 //    TFile *fOut = new TFile("fullDY_iso.root", "RECREATE");
     fOut->mkdir("tpTree")->cd();
     TTree *tOut = tIn->CloneTree(0);

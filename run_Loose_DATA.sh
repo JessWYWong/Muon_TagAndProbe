@@ -1,7 +1,6 @@
 #!/bin/sh
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 x509userproxy=/tmp/x509up_u94005
-
 #The build architecture of CMSSW version
 export SCRAM_ARCH=slc6_amd64_gcc630
 CMSSWBaseDir=/afs/cern.ch/user/w/wiwong/work/TagAndProbe/CMSSW_9_4_0_pre3/src
@@ -14,14 +13,14 @@ cd -
 
 cp ${CMSSWBaseDir}/fitMuon2_newselector2.py .
 
-iteration=miniLoose_Loose_abseta_condor
+iteration=miniLoose_Loose_abseta
 input_type=DATA
 
-if [[ "${input_type}" -eq "MC" ]]; then
+if [ "${input_type}" == "MC" ]; then
    file=mc2017
    mode=mc_all
-elif [[ "${input_type}" -eq "DATA" ]]; then
-   file=data2017
+elif [ "${input_type}" == "DATA" ]; then
+   file=dataidF_Loose
    mode=data_all
 else
    echo "Unknown parameter"
