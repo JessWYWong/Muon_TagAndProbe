@@ -1,0 +1,12 @@
+universe = vanilla
+executable = run_Tight_DATAD.sh
+
+output = log_condor/TightDATA_$(ClusterId).$(ProcId).out
+error = log_condor/TightDATA_$(ClusterId).$(ProcId).err
+log = log_condor/TightDATA_$(ClusterId).$(ProcId).log
+request_memory = 18000MB
+request_disk = 10MB
++JobFlavour = "testmatch"
+
+queue
+
